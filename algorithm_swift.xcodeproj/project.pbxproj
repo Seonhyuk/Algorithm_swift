@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		D4EC20BF295304E200B67D1A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EC20BE295304E200B67D1A /* main.swift */; };
+		D4EC20C8295305F500B67D1A /* 2941.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EC20C7295305F500B67D1A /* 2941.swift */; };
+		D4EC20CB2953152800B67D1A /* 1316.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EC20CA2953152800B67D1A /* 1316.swift */; };
+		D4EC20CD295329D000B67D1A /* 1193.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EC20CC295329D000B67D1A /* 1193.swift */; };
+		D4EC20CF295356C300B67D1A /* 10757.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EC20CE295356C300B67D1A /* 10757.swift */; };
+		D4EC20D2295358FD00B67D1A /* string_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EC20D1295358FD00B67D1A /* string_extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,13 @@
 /* Begin PBXFileReference section */
 		D4EC20BB295304E200B67D1A /* algorithm_swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = algorithm_swift; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4EC20BE295304E200B67D1A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		D4EC20C52953059400B67D1A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		D4EC20C6295305B800B67D1A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D4EC20C7295305F500B67D1A /* 2941.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2941.swift; sourceTree = "<group>"; };
+		D4EC20CA2953152800B67D1A /* 1316.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1316.swift; sourceTree = "<group>"; };
+		D4EC20CC295329D000B67D1A /* 1193.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1193.swift; sourceTree = "<group>"; };
+		D4EC20CE295356C300B67D1A /* 10757.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 10757.swift; sourceTree = "<group>"; };
+		D4EC20D1295358FD00B67D1A /* string_extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = string_extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +53,8 @@
 		D4EC20B2295304E200B67D1A = {
 			isa = PBXGroup;
 			children = (
+				D4EC20C6295305B800B67D1A /* README.md */,
+				D4EC20C52953059400B67D1A /* .gitignore */,
 				D4EC20BD295304E200B67D1A /* algorithm_swift */,
 				D4EC20BC295304E200B67D1A /* Products */,
 			);
@@ -57,9 +71,30 @@
 		D4EC20BD295304E200B67D1A /* algorithm_swift */ = {
 			isa = PBXGroup;
 			children = (
+				D4EC20D0295358C900B67D1A /* utilities */,
+				D4EC20C92953150200B67D1A /* solved */,
 				D4EC20BE295304E200B67D1A /* main.swift */,
 			);
 			path = algorithm_swift;
+			sourceTree = "<group>";
+		};
+		D4EC20C92953150200B67D1A /* solved */ = {
+			isa = PBXGroup;
+			children = (
+				D4EC20C7295305F500B67D1A /* 2941.swift */,
+				D4EC20CA2953152800B67D1A /* 1316.swift */,
+				D4EC20CC295329D000B67D1A /* 1193.swift */,
+				D4EC20CE295356C300B67D1A /* 10757.swift */,
+			);
+			path = solved;
+			sourceTree = "<group>";
+		};
+		D4EC20D0295358C900B67D1A /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D4EC20D1295358FD00B67D1A /* string_extension.swift */,
+			);
+			path = utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,7 +155,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4EC20CB2953152800B67D1A /* 1316.swift in Sources */,
 				D4EC20BF295304E200B67D1A /* main.swift in Sources */,
+				D4EC20D2295358FD00B67D1A /* string_extension.swift in Sources */,
+				D4EC20C8295305F500B67D1A /* 2941.swift in Sources */,
+				D4EC20CF295356C300B67D1A /* 10757.swift in Sources */,
+				D4EC20CD295329D000B67D1A /* 1193.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
