@@ -6,3 +6,4 @@ import Foundation
 
 // 22.12.22 solution_10757()
 
+// 22.12.23 solution_2581()
