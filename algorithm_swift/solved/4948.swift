@@ -26,7 +26,7 @@ func solution_4948() -> Void {
     }
 
     while true {
-        var n = Int(readLine()!)!
+        let n = Int(readLine()!)!
         
         if n == 0 {
             break
