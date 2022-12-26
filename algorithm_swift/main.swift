@@ -15,4 +15,5 @@ import Foundation
 // 22.12.25 solution_2738()
 // 22.12.25 solution_2566()
 
-
+// 22.12.26 solution_2750()
+// 22.12.26 solution_2587()
