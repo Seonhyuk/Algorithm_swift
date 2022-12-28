@@ -21,3 +21,6 @@ import Foundation
 // 22.12.27 solution_25305()
 // 22.12.27 solution_1427()
 // 22.12.27 solution_18870()
+
+// 22.12.28 solution_25501()
+// 22.12.28 solution_24060()
