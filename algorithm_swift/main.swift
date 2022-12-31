@@ -33,3 +33,8 @@ import Foundation
 // 22.12.30 solution_3009()
 // 22.12.30 solution_3053()
 // 22.12.30 solution_1004()
+// 22.12.30 solution_5086()
+// 22.12.30 solution_1037()
+// 22.12.30 solution_1934()
+
+// 22.12.31 solution_2981()
