@@ -42,3 +42,5 @@ import Foundation
 // 23.01.01 solution_3036()
 // 23.01.01 solution_1010()
 // 23.01.01 solution_2004()
+
+// 23.01.02 solution_2580()
