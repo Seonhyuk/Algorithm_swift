@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Deque<T>: CustomStringConvertible {
+class Deque<T> {
     private var deque: [Int: T] = [:]
     private var front = 0
     private var back = 0
@@ -50,13 +50,24 @@ class Deque<T>: CustomStringConvertible {
         return self.front == self.back
     }
     
-    var description: String {
-        var str = ""
-        for key in self.deque.keys.sorted() {
-            str += "\(self.deque[key]!) "
+    public var count: Int {
+        return self.back - self.front
+    }
+    
+    public var head: T? {
+        if self.isEmpty {
+            return nil
         }
         
-        return str
+        return self.deque[self.front + 1]
+    }
+    
+    public var tail: T? {
+        if self.isEmpty {
+            return nil
+        }
+        
+        return self.deque[self.back]
     }
 }
 
