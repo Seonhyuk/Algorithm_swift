@@ -63,3 +63,6 @@ import Foundation
 
 // 23.01.08 solution_15828()
 // 23.01.08 solution_1021()
+// 23.01.08 solution_2630()
+// 23.01.08 solution_1992()
+// 23.01.08 solution_2740()
