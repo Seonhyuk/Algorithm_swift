@@ -12,6 +12,18 @@ class Deque<T> {
     private var front = 0
     private var back = 0
     
+    public var firstIndex: Int {
+        return self.front + 1
+    }
+    
+    public var endIndex: Int {
+        return self.back
+    }
+    
+    public func value(_ index: Int) -> T? {
+        return self.deque[index]
+    }
+    
     public func pushFront(element: T) {
         self.deque[self.front] = element
         self.front -= 1
