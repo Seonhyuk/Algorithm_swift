@@ -76,3 +76,11 @@ import Foundation
 // 23.01.12 solution_2629()
 
 // 23.01.13 solution_2293()
+// 23.01.13 solution_17299()
+
+// 23.01.14 solution_3015()
+// 23.01.14 solution_24479()
+// 23.01.14 solution_24480()
+// 23.01.14 solution_24444()
+// 23.01.14 solution_1697()
+// 23.01.14 solution_7562()

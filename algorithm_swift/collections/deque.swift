@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Deque<T> {
+final class Deque<T> {
     private var deque: [Int: T] = [:]
     private var front = 0
     private var back = 0

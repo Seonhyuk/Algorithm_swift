@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Queue<T> {
+final class Queue<T> {
     private var queue: [T?] = []
     private var size: Int = 0
     private var front: Int = 0
