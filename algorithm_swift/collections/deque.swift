@@ -24,17 +24,17 @@ final class Deque<T> {
         return self.deque[index]
     }
     
-    public func pushFront(element: T) {
+    @inline(__always) public func pushFront(element: T) {
         self.deque[self.front] = element
         self.front -= 1
     }
     
-    public func pushBack(element: T) {
+    @inline(__always) public func pushBack(element: T) {
         self.back += 1
         self.deque[self.back] = element
     }
     
-    public func pop() -> T? {
+    @inline(__always) public func pop() -> T? {
         if self.isEmpty {
             return nil
         } else {
@@ -46,7 +46,7 @@ final class Deque<T> {
         }
     }
     
-    public func popLeft() -> T? {
+    @inline(__always) public func popLeft() -> T? {
         if self.isEmpty {
             return nil
         } else {
