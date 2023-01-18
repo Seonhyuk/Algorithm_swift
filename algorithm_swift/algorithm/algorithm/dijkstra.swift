@@ -22,7 +22,7 @@ func dijkstra(q: Heap<DijkstraNode>, distArray: inout [Int], graph: [Int: [(to: 
         
         if let nextNodes = graph[node.from] {
             for nxt in nextNodes {
-                let nextDist = distArray[node.from] + nxt.weight
+                let nextDist = node.dist + nxt.weight
                 if nextDist < distArray[nxt.to] {
                     distArray[nxt.to] = nextDist
                     q.heappush(value: DijkstraNode(dist: nextDist, from: nxt.to))
