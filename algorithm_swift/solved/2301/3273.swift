@@ -23,7 +23,7 @@ func solution_3273() {
 }
 
 func solution_3273_2() {
-    let n = Int(readLine()!)!
+    let _ = Int(readLine()!)!
     let arr = readLine()!.split(separator: " ").map { Int($0)! }
     let total = Int(readLine()!)!
     var answer = 0

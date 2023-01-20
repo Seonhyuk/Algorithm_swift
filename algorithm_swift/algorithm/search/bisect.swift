@@ -1,47 +1,55 @@
 func bisectLeft(arr: [Int], value: Int, asc: Bool = true) -> Int {
-    var start = 0, end = arr.count - 1
-    var idx = (start + end) / 2
+    var left = 0, right = arr.count - 1
     
-    if asc && value > arr[end] {
-        return arr.count
-    } else if !asc && value < arr[end] {
-        return arr.count
-    }
-    
-    while true {
-        if arr[idx] == value {
-            while idx > 0 {
-                if arr[idx-1] == value {
-                    idx -= 1
-                } else {
-                    break
-                }
-            }
+    if !asc {
+        while left <= right {
+            let mid = (left + right) / 2
             
-            return idx
-        }
-        else {
-            if !asc {
-                if arr[idx] > value {
-                    start = idx + 1
-                }
-                else {
-                    end = idx
-                }
+            if arr[mid] <= value {
+                right = mid - 1
             } else {
-                if arr[idx] < value {
-                    start = idx + 1
-                }
-                else {
-                    end = idx
-                }
+                left = mid + 1
             }
         }
-        
-        if (start + end) / 2 == idx {
-            return idx
+    } else {
+        while left <= right {
+            let mid = (left + right) / 2
+            
+            if arr[mid] < value {
+                left = mid + 1
+            } else {
+                right = mid - 1
+            }
         }
-        
-        idx = (start + end) / 2
     }
+    
+    return left
+}
+
+func bisectRight(arr: [Int], value: Int, asc: Bool = true) -> Int {
+    var left = 0, right = arr.count - 1
+    
+    if !asc {
+        while left <= right {
+            let mid = (left + right) / 2
+            
+            if arr[mid] <= value {
+                left = mid + 1
+            } else {
+                right = mid - 1
+            }
+        }
+    } else {
+        while left <= right {
+            let mid = (left + right) / 2
+            
+            if arr[mid] > value {
+                right = mid - 1
+            } else {
+                left = mid + 1
+            }
+        }
+    }
+    
+    return right
 }
