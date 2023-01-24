@@ -11,7 +11,7 @@ func solution_9019() {
         var idx = 0
         
         while idx < q.count {
-            var (num, path) = q[idx]
+            let (num, path) = q[idx]
             
             visited[num] = true
             
