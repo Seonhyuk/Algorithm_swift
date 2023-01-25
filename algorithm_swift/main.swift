@@ -1,5 +1,3 @@
-import Foundation
-
 // 22.12.21 solution_2941()
 // 22.12.21 solution_1316()
 // 22.12.21 solution_1193()
@@ -108,3 +106,5 @@ import Foundation
 // 23.01.23 solution_11780()
 
 // 23.01.24 solution_2618()
+
+// 23.01.25 solution_1167()
