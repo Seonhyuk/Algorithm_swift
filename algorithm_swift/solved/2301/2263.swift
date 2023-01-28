@@ -1,4 +1,4 @@
-func preorder(s1: Int, e1: Int, s2: Int, e2: Int, inorder: [Int], postorder: [Int], tree: [Int]) {
+func preorder_2263(s1: Int, e1: Int, s2: Int, e2: Int, inorder: [Int], postorder: [Int], tree: [Int]) {
     if s1 > e1 || s2 > e2 {
         return
     }
@@ -9,8 +9,8 @@ func preorder(s1: Int, e1: Int, s2: Int, e2: Int, inorder: [Int], postorder: [In
     let rightNode = e1 - tree[root]
     
     print(root, terminator: " ")
-    preorder(s1: s1, e1: tree[root] - 1, s2: s2, e2: s2 + leftNode - 1, inorder: inorder, postorder: postorder, tree: tree)
-    preorder(s1: tree[root] + 1, e1: e1, s2: e2 - rightNode, e2: e2 - 1, inorder: inorder, postorder: postorder, tree: tree)
+    preorder_2263(s1: s1, e1: tree[root] - 1, s2: s2, e2: s2 + leftNode - 1, inorder: inorder, postorder: postorder, tree: tree)
+    preorder_2263(s1: tree[root] + 1, e1: e1, s2: e2 - rightNode, e2: e2 - 1, inorder: inorder, postorder: postorder, tree: tree)
 }
 
 func solution_2263() {
@@ -24,5 +24,5 @@ func solution_2263() {
         tree[inorder[i]] = i
     }
     
-    preorder(s1: 0, e1: n-1, s2: 0, e2: n-1, inorder: inorder, postorder: postorder, tree: tree)
+    preorder_2263(s1: 0, e1: n-1, s2: 0, e2: n-1, inorder: inorder, postorder: postorder, tree: tree)
 }
