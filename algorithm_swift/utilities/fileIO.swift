@@ -2,6 +2,7 @@ import Foundation
 
 // 빠른 입출력
 // 라이노님이 작성하신 코드라고함니당
+
 final class FileIO {
     private var buffer:[UInt8]
     private var index: Int
@@ -22,8 +23,7 @@ final class FileIO {
         var now = read()
         var isPositive = true
         
-        while now == 10
-                || now == 32 { now = read() }
+        while now == 10 || now == 32 { now = read() }
         if now == 45{ isPositive.toggle(); now = read() }
         while now >= 48, now <= 57 {
             sum = sum * 10 + Int(now-48)
@@ -37,12 +37,26 @@ final class FileIO {
         var str = 0
         var now = read()
         
-        while now == 10
-                || now == 32 { now = read() }
+        while now == 10 || now == 32 { now = read() }
         
-        while now != 10
-                && now != 32 && now != 0 {
+        while now != 10 && now != 32 && now != 0 {
             str += Int(now)
+            now = read()
+        }
+        
+        return str
+    }
+    
+    @inline(__always) func readStringArr() -> [UInt8] {
+        var str: [UInt8] = []
+        var now = read()
+        
+        while now == 10 || now == 32 {
+            now = read()
+        }
+        
+        while now != 10 && now != 32 && now != 0 {
+            str.append(now)
             now = read()
         }
         
