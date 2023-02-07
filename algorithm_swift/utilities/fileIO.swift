@@ -19,7 +19,7 @@ final class FileIO {
     }
     
     @inline(__always) func readInt() -> Int {
-        var sum = 0
+        var sum: Int = 0
         var now = read()
         var isPositive = true
         
