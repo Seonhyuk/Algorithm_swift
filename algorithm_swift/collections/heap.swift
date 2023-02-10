@@ -15,16 +15,24 @@ final class Heap<T: Comparable> {
         return self.last
     }
     
+    @inline(__always) var top: T? {
+        if last == 0 {
+            return nil
+        }
+        
+        return self.heap[1]
+    }
+    
     @inline(__always) func heappush(value: T) {
         self.last += 1
         self.heap.append(value)
         
-        var c = last
-        var p = c // 2
-        while p >= 1 && self.heap[p]! < self.heap[c]! {
+        var c = self.last
+        var p = c / 2
+        while p >= 1 && self.heap[p]! > self.heap[c]! {
             swapValue(a: p, b: c)
             c = p
-            p = c // 2
+            p = c / 2
         }
     }
     
@@ -33,19 +41,19 @@ final class Heap<T: Comparable> {
             return nil
         }
         
-        let tmp = self.heap[1]!
-        self.heap[1] = self.heap[self.last]!
+        let tmp = self.heap[1]
+        self.heap[1] = self.heap[self.last]
         let _ = self.heap.popLast()
         self.last -= 1
         
         var p = 1
         var c = p * 2
         while c <= self.last {
-            if c + 1 <= self.last && self.heap[c]! < self.heap[c+1]! {
+            if c + 1 <= self.last && self.heap[c]! > self.heap[c+1]! {
                 c += 1
             }
             
-            if self.heap[p]! < self.heap[c]! {
+            if self.heap[p]! > self.heap[c]! {
                 self.swapValue(a: p, b: c)
                 p = c
                 c = p * 2
@@ -58,8 +66,8 @@ final class Heap<T: Comparable> {
     }
     
     @inline(__always) private func swapValue(a: Int, b: Int) {
-        let flag = self.heap[b]!
-        self.heap[b] = self.heap[a]!
+        let flag = self.heap[b]
+        self.heap[b] = self.heap[a]
         self.heap[a] = flag
     }
     

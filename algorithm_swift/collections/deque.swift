@@ -37,25 +37,25 @@ final class Deque<T> {
     @inline(__always) public func pop() -> T? {
         if self.isEmpty {
             return nil
-        } else {
-            let returnValue = self.deque[self.back]
-            self.deque.removeValue(forKey: self.back)
-            self.back -= 1
-            
-            return returnValue
         }
+        
+        let returnValue = self.deque[self.back]
+        self.deque.removeValue(forKey: self.back)
+        self.back -= 1
+        
+        return returnValue
     }
     
     @inline(__always) public func popLeft() -> T? {
         if self.isEmpty {
             return nil
-        } else {
-            self.front += 1
-            let returnValue = self.deque[self.front]
-            self.deque.removeValue(forKey: self.front)
-            
-            return returnValue
         }
+        
+        self.front += 1
+        let returnValue = self.deque[self.front]
+        self.deque.removeValue(forKey: self.front)
+        
+        return returnValue
     }
     
     public var isEmpty: Bool {
