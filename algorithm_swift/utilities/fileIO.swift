@@ -62,4 +62,23 @@ final class FileIO {
         
         return str
     }
+    
+    @inline(__always) func readNString(n: Int) -> [UInt8] {
+        var str: [UInt8] = Array(repeating: 0, count: n)
+        var now: UInt8 = 0
+        
+        var i = 0
+        while i < n {
+            now = read()
+            
+            if now == 10 || now == 32 {
+                continue
+            }
+            
+            str[i] = now
+            i += 1
+        }
+        
+        return str
+    }
 }
