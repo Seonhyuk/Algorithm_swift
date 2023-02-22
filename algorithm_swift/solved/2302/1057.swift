@@ -1,6 +1,6 @@
 func solution_1057() {
     let line = readLine()!.split(separator: " ").map { Int($0)! }
-    let n = line[0]
+    let _ = line[0]
     var a = line[1], b = line[2]
     var cnt = 0
 
